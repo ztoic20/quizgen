@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QUIZGEN</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <h2>QUIZGEN</h2>
+  <p class="sub">Use csv file.</p>
+
+
+  <div class="card import">
+    <h3>Load your own questions (CSV)</h3>
+    <div class="row">
+      <input id="quizFile" type="file" accept=".csv" />
+<button id="btnLoadCSV" class="btn" type="button">Load CSV</button>
+    </div>
+    <p id="importMsg" class="sub"></p>
+  </div>
+
+
+  <div class="card">
+    <div class="top">
+      <h2>Question <span id="qNum"></span> of <span id="qTotal"></span></h2>
+      <div class="mini" id="mini"></div>
+    </div>
+
+    <p id="qText" class="q"></p>
+
+    <input id="answer" placeholder="Type your answer…" autocomplete="off" />
+
+    <div id="feedback" class="feedback hidden"></div>
+
+    <div class="nav">
+      <button id="skip" class="ghost" type="button">Skip</button>
+      <button id="check" type="button">Check</button>
+    </div>
+  </div>
+
+  <div id="result" class="card hidden">
+    <h2>Summary</h2>
+    <p id="score" class="sum"></p>
+    <p id="mistakes" class="sum"></p>
+    <p id="correct" class="sum"></p>
+  </div>
+</div>
+<script src="csv-import.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

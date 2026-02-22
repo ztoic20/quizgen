@@ -1,0 +1,175 @@
+
+*{
+  box-sizing: border-box;
+}
+
+html,body{
+  margin:0;
+  padding:0;
+  overflow:auto;
+  height:auto;
+}
+
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:#0b1020;
+  color:#eaf0ff;
+}
+
+/* Main wrapper */
+.wrap{
+  max-width:760px;
+  margin:auto;
+  padding:16px;
+}
+
+/* Card styling with better breathing room */
+.card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  padding:14px;
+  border-radius:14px;
+  margin-top:14px;
+}
+
+/* Add spacing between elements inside cards */
+.card h2,
+.card p,
+.card input,
+.card button{
+  margin-top:10px;
+}
+
+.card h2:first-child,
+.card p:first-child{
+  margin-top:0;
+}
+
+.sub{
+  color:#a8b3d6;
+  margin:8px 0 0;
+}
+
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:10px;
+}
+
+.mini{
+  color:#a8b3d6;
+  font-size:.9rem;
+  margin-top:4px;
+  text-align:right;
+}
+
+.q{
+  font-size:1.08rem;
+  line-height:1.5;
+  margin:14px 0;
+}
+
+/* Input styling with proper spacing */
+input{
+  width:97%;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(0,0,0,.18);
+  color:#fff;
+  outline:none;
+  margin:10px 0;
+}
+
+input:focus{
+  border-color:rgba(46,204,113,.7);
+}
+
+/* Navigation buttons */
+.nav{
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+  margin-top:12px;
+  flex-wrap:wrap;
+}
+
+button{
+  padding:10px 14px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.18);
+  background:#2d6cdf;
+  color:#fff;
+  cursor:pointer;
+  font-weight:700;
+  margin-top:6px;
+}
+
+button.ghost{
+  background:rgba(255,255,255,.10);
+  color:#eaf0ff;
+}
+
+button:disabled{
+  opacity:.6;
+  cursor:not-allowed;
+}
+
+.feedback{
+  margin-top:10px;
+  padding:10px;
+  border-radius:10px;
+  background:rgba(0,0,0,.14);
+  color:#a8b3d6;
+  border:1px solid rgba(255,255,255,.12);
+}
+
+.feedback.bad{
+  border-color:rgba(255,92,92,.55);
+}
+
+.feedback.ok{
+  border-color:rgba(46,204,113,.45);
+}
+
+.hidden{
+  display:none;
+}
+
+/* Import UI spacing */
+.card.import .row{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+  padding:1px;
+}
+
+.card.import input[type="file"]{
+  flex:1;
+  min-width:240px;
+  max-width:100%;
+  padding:6px;
+  margin:8px 0;
+}
+
+.sum{
+  margin:8px 0;
+  color:#a8b3d6;
+  font-weight:700;
+}
+
+.card.import.compact{
+  padding: 1px;
+  opacity: 0.85;
+}
+
+.card.import.compact p.sub{
+  display: none;
+}
+
+.h1{
+  padding-bottom: 1px;
+  margin-bottom: 0;
+}
