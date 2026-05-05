@@ -173,3 +173,57 @@ button:disabled{
   padding-bottom: 1px;
   margin-bottom: 0;
 }
+
+/* PWA Install Prompt */
+.install-prompt {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.install-content {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.install-content h3 {
+  margin-top: 0;
+  color: #eaf0ff;
+}
+
+.install-content p {
+  color: #a8b3d6;
+  margin: 10px 0 20px;
+}
+
+.install-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.install-buttons button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: #2d6cdf;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.install-buttons .ghost {
+  background: rgba(255, 255, 255, 0.1);
+  color: #eaf0ff;
+}
