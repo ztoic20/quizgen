@@ -289,54 +289,6 @@ if (saved) {
   render();
 }
 
-// PWA Install Prompt
-let deferredPrompt;
-
-window.addEventListener('beforeinstallprompt', (e) => {
-  // Prevent the mini-infobar from appearing on mobile
-  e.preventDefault();
-  // Stash the event so it can be triggered later.
-  deferredPrompt = e;
-  // Show the install prompt
-  showInstallPrompt();
-});
-
-function showInstallPrompt() {
-  const prompt = document.getElementById('installPrompt');
-  if (prompt) {
-    prompt.classList.remove('hidden');
-  }
-}
-
-function hideInstallPrompt() {
-  const prompt = document.getElementById('installPrompt');
-  if (prompt) {
-    prompt.classList.add('hidden');
-  }
-}
-
-document.getElementById('installBtn').addEventListener('click', () => {
-  // Hide the prompt
-  hideInstallPrompt();
-  // Show the install prompt
-  if (deferredPrompt) {
-    deferredPrompt.prompt();
-    // Wait for the user to respond to the prompt
-    deferredPrompt.userChoice.then((choiceResult) => {
-      if (choiceResult.outcome === 'accepted') {
-        console.log('User accepted the install prompt');
-      } else {
-        console.log('User dismissed the install prompt');
-      }
-      deferredPrompt = null;
-    });
-  }
-});
-
-document.getElementById('cancelInstallBtn').addEventListener('click', () => {
-  hideInstallPrompt();
-});
-
 // Register service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
